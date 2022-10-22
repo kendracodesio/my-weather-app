@@ -1,18 +1,18 @@
 import React from "react";
-import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+// import Container from 'react-bootstrap/Container';
+// import Button from 'react-bootstrap/Button';
+// import Card from 'react-bootstrap/Card';
 import './Weather.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Weather(props) {
-  const caretIcon = <FontAwesomeIcon icon={faAngleUp} />;
+  // const caretIcon = <FontAwesomeIcon icon={faAngleUp} />;
   if (props.data) {
     return (
       <div className="container">
-      <div className="card pt-3 mx-auto">
+      <div className="card mt-3 mx-auto">
         <div className="card-header" role="tab" id="headingOne">
           <div className="d-flex justify-content-between">
             <div>
