@@ -35,7 +35,7 @@ export default function Header() {
   return (
     <div>
       <Container fluid className="Header-container">
-        <Row className="Header-head ps-5 pt-3">
+        <Row className="Header-head ps-5">
           <Col xs={12} md={3}  className="Header-col">
             <div className="Header-logo-wrapper">
               <div className="text-left Header-logo-box">
@@ -44,8 +44,8 @@ export default function Header() {
             </div>
           </Col>
           <Col xs={12} md={6} className="Header-col">
-            <Form className="Header-form pt-4" onSubmit={handleSubmit}>
-              <div className="d-flex justify-content-center">
+            <Form className="Header-form" onSubmit={handleSubmit}>
+              <div className="d-flex justify-content-sm-left">
                 <Button id="getLocation" className="me-1">
                   <FontAwesomeIcon icon={faLocationArrow} />
                 </Button>
@@ -64,8 +64,8 @@ export default function Header() {
 
             </Form>
           </Col>
-          <Col xs={12} md={3} className="pt-3">
-            <div className="text-right">
+          <Col xs={12} md={3}>
+            <div className="text-right flex-column  d-md-flex justify-content-md-left">
               <h2>Friday, October 21, 2022</h2>
             </div>
           

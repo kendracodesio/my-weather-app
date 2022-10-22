@@ -14,11 +14,12 @@
 @media (max-width: 500px) {
   .Header-head {
   align-content: left;
+  padding: 5px !important;
   
   }
 
   h2, Form {
-    padding-top: 0;
+    padding-top: 12px;
     text-align: left;
   }
 
