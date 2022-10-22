@@ -51,7 +51,7 @@ h1 {
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .Header-head {
     align-content: left;
     padding: 5px !important;
@@ -65,7 +65,7 @@ h1 {
   }
 
   .Header-input {
-    width: 200px;
+    width: 240px;
   }
 
 }
