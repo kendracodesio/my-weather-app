@@ -7,6 +7,19 @@ li {
   list-style-type: none;
 }
 
-.weather-details {
+.Weather-details {
   text-align: left;
+}
+
+.Weather-date-wrapper {
+  width: 100vmax;
+  background: #61dafb;
+  height: 40px;
+  align-items: center;
+
+}
+
+h2 {
+  font-size: 20px;
+
 }

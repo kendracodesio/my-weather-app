@@ -1,0 +1,68 @@
+
+
+.Header-head {
+  background-color: #282c34;
+  width: 100vmax;
+  height: 100px;
+  align-items: center;
+  color: white;
+}
+
+/* .Header-col {
+  padding-right: 180px;
+}  */
+
+Button {
+  background-color: #61dafb !important;
+}
+
+
+h1 {
+  font-size: 16px;
+  line-height: 1.1;
+
+}
+
+.Header-logo-box {
+  width: 110px;
+  border: 1px solid white;
+  padding: 30px 5px 0px;
+}
+
+.Header-input {
+  width: 300px;
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logo {
+  /* height: 0vmin; */
+  pointer-events: none;
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
