@@ -36,14 +36,14 @@ export default function Header() {
     <div>
       <Container fluid className="Header-container">
         <Row className="Header-head ps-5 pt-3">
-          <Col xs={6} md={3}  className="Header-col">
+          <Col xs={12} md={3}  className="Header-col">
             <div className="Header-logo-wrapper">
               <div className="text-left Header-logo-box">
                 <h1>{weatherIcon}<br />TruWeather</h1>
               </div>
             </div>
           </Col>
-          <Col xs={6} md={6} className="Header-col">
+          <Col xs={12} md={6} className="Header-col">
             <Form className="Header-form pt-4" onSubmit={handleSubmit}>
               <div className="d-flex justify-content-center">
                 <Button id="getLocation" className="me-1">
