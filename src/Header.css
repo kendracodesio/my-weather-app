@@ -3,14 +3,28 @@
 .Header-head {
   background-color: #282c34;
   width: 100vmax;
-  height: 100px;
-  align-items: center;
+  padding-top: 7px;
+  padding-bottom: 7px;
   color: white;
+  display: flex;
+  align-content: space-around;
+  align-items: center;
 }
 
-/* .Header-col {
-  padding-right: 180px;
-}  */
+@media (max-width: 500px) {
+  .Header-head {
+  align-content: flex-start;
+  
+  }
+
+  h2 {
+    padding-top: 0;
+    text-align: left;
+  }
+
+
+
+}
 
 Button {
   background-color: #61dafb !important;
