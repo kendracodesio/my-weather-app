@@ -65,7 +65,7 @@ export default function Header() {
             </Form>
           </Col>
           <Col xs={12} md={3}>
-            <div className="text-right flex-column  d-md-flex justify-content-md-left">
+            <div className="text-right flex-column d-md-flex justify-content-md-left">
               <h2>Friday, October 21, 2022</h2>
             </div>
           
@@ -78,11 +78,11 @@ export default function Header() {
             </div>
           </Row> */}
         </Row>
-        <Container>
+        <Row>
         
           <Weather data={data} />
 
-        </Container>
+        </Row>
       </Container>
     </div>
   );
