@@ -13,11 +13,11 @@
 
 @media (max-width: 500px) {
   .Header-head {
-  align-content: flex-start;
+  align-content: left;
   
   }
 
-  h2 {
+  h2, Form {
     padding-top: 0;
     text-align: left;
   }
