@@ -9,66 +9,123 @@ li {
 
 .Weather-details {
   text-align: left;
+  font-size: 20px;
 }
 
 .Weather-date-wrapper {
   width: 100vmax;
-  background: #61dafb;
   height: 40px;
   align-items: center;
 
 }
 
-.card {
+
+.card, .accordion {
   margin-top: 20px;
   max-width: 50%;
+  background: transparent;
+  border: 1px solid var(--secondary-color);
 }
 
-.card-header {
-  background:#61dafb;
-  
+.accordion-item {
+    background: transparent;
 }
+
+.card-header,  .accordion-button, .accordion-header {
+background: var(--light-color);
+border: 1px solid var(--secondary-color);
+}
+
+.accordion-button {
+  color: var(--primary-color) !important;
+  font-size: 22px;
+
+}
+
+.Weather-details-item, .Weather-forecast {
+  background: linear-gradient(-225deg, #22A9E5 0%, #6BBBFF 48%, #E55E22 100%);
+  opacity: .9;
+  color: #fff !important;
+  font-size: 25px !important;
+  border-bottom: 1px solid var(--light-color);
+  padding: 5px;
+}
+
+.Weather-temp {
+ line-height: 1.5;
+}
+
 .Weather-time, .Weather-city, .Weather-temp,
 .Weather-temp, .Weather-description {
-  color:#282C34;
+  color: #fff;
+  font-family: 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
 }
+
 .Weather-city, .Weather-description {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 600;
 }
+
+.accordion-button {
+  font-size: 22px;
+  font-weight: 600;
+}
+.Weather-description .units a {
+  color: var(--primary-color) !important;
+
+}
+.Weather-city,
 .Weather-time {
-  font-size: 20px;
+  color: var(--primary-color);
+}
+.Weather-time {
+  font-size: 18px;
   font-weight: 500;
 }
 
 .Weather-temp {
-  font-size: 70px;
+  font-size: 80px;
   font-weight: 600;
 }
 .Weather-description {
   font-size: 25px;
   text-transform: capitalize;
-  line-height: 1;
+  line-height: .1;
+  text-align: right;
 }
 
+.Weather-temp-today-hi, .Weather-temp-today-lo {
+  font-size: 22px;
+  color: #fff;
+}
 .units, .units a {
-  font-size: 18px;
+  font-size: 22px;
   line-height: .9;
+  color: #fff;
   
 }
 
 .units a {
   text-decoration: none;
-  color:#61dafb;
-}
-img {
-padding-top: 0;
-float: right;
-width: 65%;
+  color: #fff;
 }
 
-@media (max-width: 768px) {
-  .card {
+.Weather-icon {
+width: 150px;
+
+}
+
+.Weather-row {
+  position: relative;
+  top: -20px;
+
+}
+
+
+
+@media (max-width: 1000px) {
+  .card, .accordion {
     max-width: 95%;
 
   }

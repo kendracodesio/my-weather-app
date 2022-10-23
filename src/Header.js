@@ -35,8 +35,8 @@ export default function Header() {
   return (
     <div>
       <Container fluid className="Header-container">
-        <Row className="Header-head ps-5">
-          <Col xs={12} md={3}  className="Header-col">
+        <Row className="Header-head ps-5 shadow">
+          <Col xs={12} md={3} className="Header-col">
             <div className="Header-logo-wrapper">
               <div className="text-left Header-logo-box">
                 <h1>{weatherIcon}<br />TruWeather</h1>
@@ -45,8 +45,8 @@ export default function Header() {
           </Col>
           <Col xs={12} md={6} className="Header-col">
             <Form className="Header-form" onSubmit={handleSubmit}>
-              <div className="d-flex justify-content-sm-left">
-                <Button id="getLocation" className="me-1">
+              <div className="d-flex justify-content-md-center">
+                <Button id="getLocation" className="me-1 Header-location-btn">
                   <FontAwesomeIcon icon={faLocationArrow} />
                 </Button>
                 <Form.Control
@@ -57,32 +57,21 @@ export default function Header() {
                   autoComplete="off"
                   autoFocus={true}
                 />
-                <Button type="submit" value="Search" className="ms-1">
+                <Button type="submit" value="Search" className="ms-1 Header-search-btn">
                   <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </Button>
               </div>
-
             </Form>
           </Col>
           <Col xs={12} md={3}>
             <div className="text-right flex-column d-md-flex justify-content-md-left">
-              <h2>Friday, October 21, 2022</h2>
-            </div>
-          
-          </Col>
-          {/* <Row className="pt-3" >
-            <div className="Weather-date-wrapper d-flex">
-              <div>
-                <h2>Friday, October 21, 2022</h2>
+              <div className="Header-date-container pe-2">
+                <h2 className="Header-date">Friday, October 21, 2022</h2>
               </div>
             </div>
-          </Row> */}
+          </Col>
         </Row>
-        <Row>
-        
-          <Weather data={data} />
-
-        </Row>
+        <Weather data={data} />
       </Container>
     </div>
   );

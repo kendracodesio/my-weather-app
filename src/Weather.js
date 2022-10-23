@@ -2,65 +2,180 @@ import React from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Dropdown from 'react-bootstrap/Dropdown';
-// import Card from 'react-bootstrap/Card';
+import Accordion from 'react-bootstrap/Accordion';
 import './Weather.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
+
 
 
 export default function Weather(props) {
-  // const caretIcon = <FontAwesomeIcon icon={faAngleUp} />;
   if (props.data) {
+    console.log(props.data);
     return (
-      <div className="container">
-        <div className="card mt-3 mx-auto">
-          <div className="card-header" role="tab" id="headingOne">
-            <div className="d-flex justify-content-between align-items-center">
+      <Container>
+        <div className="card mt-5 mx-auto shadow">
+          <div className="card-header">
+            <div className="d-flex justify-content-left align-items-center pt-2 ms-2">
               <div>
-                <h3 className="mt-1 card-heading Weather-city">{props.data.name}</h3>
+                <h3 className="Weather-city">{props.data.name}</h3>
               </div>
               <div>
-                <p className="mt-2 Weather-time"> as of 10:20pm PST</p>
+                <div className="ms-3 Weather-time"> As of 10:20pm PST</div>
               </div>
             </div>
           </div>
-          <div className="card-body">
-            <Container>
-              <Row className="d-flex justify-content-between">
-                <Col className="d-block">
-                  <div className="Weather-temp d-flex">{Math.round(props.data.main.temp)}º
-                    <div className="d-flex flex-column units ps-2 justify-content-center align-items-center"><a href="#/action-1"><strong>F</strong></a>⎯<a href="#/action-2">C</a></div></div>
-                  <div className="Weather-description">{props.data.weather[0].description}</div>
+            <div className="card-body">
+              <Row className="pb-0">
+                <Col className="d-flex justify-content-between align-items-center">
+                  <div className="d-flex justify-content-left align-items-center">
+                    <div>
+                      <div className="Weather-temp">{Math.round(props.data.main.temp)}º</div>
+                    </div>
+                    <div>
+                      <div>
+                        <div className="d-flex flex-column units justify-content-center align-items-center ps-2">
+                          <a href="#/action-1"><strong>F</strong></a>⎯<a href="#/action-2">C</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="d-flex justify-content-center align-items-center flex-column">
+                      <div>
+                        <img className="Weather-icon"
+                          src={`http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`}
+                          alt="weather icon" />
+                      </div>
+                    </div>
+                  </div>
                 </Col>
-                <Col className="d-block p-0">
-                  <img className="p-0 d-block"
-                    src={`http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`}
-                    alt="weather icon"
-                  />
+                <Row className="pt-0 pb-3 Weather-row">
+                  <div className="d-flex justify-content-between align-items-center">
+                    <div>
+                    <span className="Weather-temp-today-hi"><strong>↑{Math.round(props.data.main.temp_max)}º</strong></span>  <span className="Weather-temp-today-lo">↓{Math.round(props.data.main.temp_min)}º</span>
+                    </div>
+                    <div>
+                      <div className="Weather-description">{props.data.weather[0].description}</div>
+                    </div>
+                  </div>
+                </Row>
+              </Row>
+              <Row>
+                <Col className="pt-3">
+                  <ul>
+                    <li className="Weather-details-item">
+                      <div className="d-flex justify-content-between">
+                        <div>
+                          Feels Like:
+                        </div>
+                        <div>
+                          {Math.round(props.data.main.feels_like)}ºF
+                        </div>
+                      </div>
+                    </li>
+                    <li className="Weather-details-item">
+                      <div className="d-flex justify-content-between">
+                        <div>
+                          Wind Speed:
+                        </div>
+                        <div>
+                          {props.data.wind.speed.toFixed(1)} mph
+                        </div>
+                      </div>
+                    </li>
+                    <li className="Weather-details-item">
+                      <div className="d-flex justify-content-between">
+                        <div>
+                          Humidity:
+                        </div>
+                        <div>
+                          {props.data.main.humidity}%
+                        </div>
+                      </div>
+                    </li>
+                    <li className="Weather-details-item">
+                      <div className="d-flex justify-content-between">
+                        <div>
+                          Pressure:
+                        </div>
+                        <div>
+                          {props.data.main.pressure} hPa
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </Col>
               </Row>
-            </Container>
-          </div>
+            </div>
         </div>
-      </div>
+        <Accordion className="mx-auto p-0" defaultActiveKey="0">
+          <Accordion.Item className="pt-0" eventKey="0">
+            <Accordion.Header className="p-0">Five Day Forecast</Accordion.Header>
+            <Accordion.Body >
+              <Row>
+                <Col>
+                  <ul>
+                    <li className="Weather-forecast">
+                      <div className="d-flex justify-content-between">
+                        <div>
+                          Saturday 🌤 
+                        </div>
+                        <div>
+                          <strong>67º</strong> | 56º
+                        </div>
+                      </div>
+                    </li>
+                    <li className="Weather-details-item">
+                      <div className="d-flex justify-content-between">
+                        <div>
+                          Sunday ☀️
+                        </div>
+                        <div>
+                          <strong>69º</strong> | 50º
+                        </div>
+                      </div>
+                    </li>
+                    <li className="Weather-details-item">
+                      <div className="d-flex justify-content-between">
+                        <div>
+                          Monday ☀️
+                        </div>
+                        <div>
+                          <strong>70º</strong> | 63º
+                        </div>
+                      </div>
+                    </li>
+                    <li className="Weather-details-item">
+                      <div className="d-flex justify-content-between">
+                        <div>
+                          Tuesday 🌤
+                        </div>
+                        <div>
+                          <strong>60º</strong> | 53º
+                        </div>
+                      </div>
+                    </li>
+                    <li className="Weather-details-item">
+                      <div className="d-flex justify-content-between">
+                        <div>
+                          Wednesday ☀️
+                        </div>
+                        <div>
+                          <strong>70º</strong> | 63º
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </Col>
+              </Row>
+            </Accordion.Body>
+          </Accordion.Item>
+          
+        </Accordion>
+    
+      </Container>
     );
   }
 }
 
 
 
-/* <div>Humidity: {props.data.main.humidity}%</div>
-<div>Wind Speed: {props.data.wind.speed.toFixed(1)} mph</div>  */
-
-
-<Dropdown className="d-inline">
-  <Dropdown.Toggle variant="success" id="dropdown-basic">
-    Units
-  </Dropdown.Toggle>
-
-  <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1">Imperial</Dropdown.Item>
-    <Dropdown.Item href="#/action-2">Metric</Dropdown.Item>
-  </Dropdown.Menu>
-</Dropdown>
