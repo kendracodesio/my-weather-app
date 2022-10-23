@@ -22,7 +22,7 @@ li {
 
 .card, .accordion {
   margin-top: 20px;
-  max-width: 50%;
+  max-width: 65%;
   background: transparent;
   border: 1px solid var(--secondary-color);
 }
@@ -42,14 +42,6 @@ border: 1px solid var(--secondary-color);
 
 }
 
-.Weather-details-item, .Weather-forecast {
-  background: linear-gradient(-225deg, #22A9E5 0%, #6BBBFF 48%, #E55E22 100%);
-  opacity: .9;
-  color: #fff !important;
-  font-size: 25px !important;
-  border-bottom: 1px solid var(--light-color);
-  padding: 5px;
-}
 
 .Weather-temp {
  line-height: 1.5;
@@ -91,7 +83,7 @@ border: 1px solid var(--secondary-color);
 .Weather-description {
   font-size: 25px;
   text-transform: capitalize;
-  line-height: .1;
+  line-height: 1;
   text-align: right;
 }
 
@@ -122,6 +114,18 @@ width: 150px;
 
 }
 
+.Weather-details-item,
+.Weather-forecast {
+  background: var(--gradient-color);
+  opacity: .9;
+  color: #fff !important;
+  font-size: 25px !important;
+  border-bottom: 1px solid var(--light-color);
+  padding: 5px;
+}
+
+
+
 
 
 @media (max-width: 1000px) {
@@ -129,4 +133,15 @@ width: 150px;
     max-width: 95%;
 
   }
+}
+
+@media (max-width: 600px) {
+  .Weather-description, .Weather-details-item,
+    .Weather-forecast {
+    font-size: 22px !important;
+
+  }
+
+
+
 }

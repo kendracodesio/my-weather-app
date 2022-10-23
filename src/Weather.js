@@ -5,11 +5,8 @@ import Col from 'react-bootstrap/Col';
 import Accordion from 'react-bootstrap/Accordion';
 import './Weather.css';
 
-
-
 export default function Weather(props) {
   if (props.data) {
-    console.log(props.data);
     return (
       <Container>
         <div className="card mt-5 mx-auto shadow">
@@ -171,9 +168,13 @@ export default function Weather(props) {
           </Accordion.Item>
           
         </Accordion>
-    
+        <footer class="pt-5 pb-3 text-center">
+          <div>An <a href="https://github.com/kendracodesio/my-weather-app.git" target="_blank" rel="noreferrer">open-source project </a> 
+          by Kendra Reynolds</div>
+        </footer>
       </Container>
     );
+
   }
 }
 

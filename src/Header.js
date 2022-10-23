@@ -18,7 +18,7 @@ export default function Header() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    let apiKey = "1e443f6da9b633764beaeb76bb472402";
+    let apiKey = "0ced1399882a9c58450ec5c738defd7a";
     let units = "imperial";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(getData);
@@ -36,7 +36,7 @@ export default function Header() {
     <div>
       <Container fluid className="Header-container">
         <Row className="Header-head ps-5 shadow">
-          <Col xs={12} md={3} className="Header-col">
+          <Col xs={12} md={3}  className="Header-col">
             <div className="Header-logo-wrapper">
               <div className="text-left Header-logo-box">
                 <h1>{weatherIcon}<br />TruWeather</h1>
@@ -61,17 +61,18 @@ export default function Header() {
                   <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </Button>
               </div>
+
             </Form>
           </Col>
           <Col xs={12} md={3}>
             <div className="text-right flex-column d-md-flex justify-content-md-left">
-              <div className="Header-date-container pe-2">
+              <div className="Header-date-container pe-">
                 <h2 className="Header-date">Friday, October 21, 2022</h2>
               </div>
             </div>
           </Col>
         </Row>
-        <Weather data={data} />
+          <Weather data={data} />
       </Container>
     </div>
   );
