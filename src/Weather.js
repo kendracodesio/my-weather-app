@@ -104,7 +104,7 @@ export default function Weather(props) {
               </Row>
             </div>
         </div>
-        <Accordion className="mx-auto p-0" defaultActiveKey="0">
+        <Accordion className="mx-auto p-0 shadow" defaultActiveKey="0">
           <Accordion.Item className="pt-0" eventKey="0">
             <Accordion.Header className="p-0">Five Day Forecast</Accordion.Header>
             <Accordion.Body >
