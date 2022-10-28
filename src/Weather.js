@@ -8,14 +8,26 @@ import './Weather.css';
 
 export default function Weather(props) {
 
+
   if(props.data) {
+
+
+    const countryCode = props.data.sys.country;
+
+    const regionNames = new Intl.DisplayNames(
+      ['en'], { type: 'region' }
+    );
+
+    const countryName = (regionNames.of(countryCode));
+
+
     return (
       <Container>
         <div className="card mt-5 mx-auto shadow">
           <div className="card-header">
             <div className="d-flex justify-content-left align-items-center pt-2 ms-2">
               <div>
-                <h3 className="Weather-city">{props.data.name}</h3>
+                <h3> <span className="Weather-city">{props.data.name},</span> <span className="Weather-country">{countryName}</span></h3>
               </div>
               <div>
                 
