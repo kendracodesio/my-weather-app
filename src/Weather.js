@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Accordion from 'react-bootstrap/Accordion';
+import FormattedTime from "./FormattedTime";
 import './Weather.css';
 
 export default function Weather(props) {
@@ -17,7 +18,10 @@ export default function Weather(props) {
                 <h3 className="Weather-city">{props.data.name}</h3>
               </div>
               <div>
-                <div className="ms-3 Weather-time"></div>
+                
+                <div className="ms-3 Weather-time">
+                  <FormattedTime timezone={props.data.timezone} />
+                </div>
               </div>
             </div>
           </div>
