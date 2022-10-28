@@ -22,15 +22,14 @@ export default function Weather(props) {
 
 
     return (
-      <Container>
+      <Container className="Weather-container">
         <div className="card mt-5 mx-auto shadow">
           <div className="card-header">
-            <div className="d-flex justify-content-left align-items-center pt-2 ms-2">
+            <div className="d-flex justify-content-left align-items-center Weather-header pt-2 ms-2">
               <div>
                 <h3> <span className="Weather-city">{props.data.name},</span> <span className="Weather-country">{countryName}</span></h3>
               </div>
               <div>
-                
                 <div className="ms-3 Weather-time">
                   <FormattedTime timezone={props.data.timezone} />
                 </div>
