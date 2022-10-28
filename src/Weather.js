@@ -22,6 +22,7 @@ export default function Weather(props) {
 
 
     return (
+      
       <Container className="Weather-container">
         <div className="card mt-5 mx-auto shadow">
           <div className="card-header">
@@ -182,13 +183,14 @@ export default function Weather(props) {
               </Row>
             </Accordion.Body>
           </Accordion.Item>
-          
+  
         </Accordion>
-        <footer className="pt-5 pb-3 text-center">
-          <div>An <a href="https://github.com/kendracodesio/my-weather-app.git" target="_blank" rel="noreferrer">open-source project </a> 
-          by Kendra Reynolds</div>
+        <footer className="mx-auto d-flex pb-3 pt-4">
+          <div>This project was coded by <a href="https://astonishing-gnome-05de92.netlify.app/" target="_blank" rel="noreferrer">Kendra Reynolds</a> and made <a href="https://github.com/kendracodesio/my-weather-app.git" target="_blank" rel="noreferrer">open source on GitHub</a></div>
         </footer>
+   
       </Container>
+        
     );
 
   }
