@@ -2,18 +2,14 @@ import React from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Accordion from 'react-bootstrap/Accordion';
+import Forecast from "./Forecast";
 import FormattedTime from "./FormattedTime";
 import './Weather.css';
 
 export default function Weather(props) {
 
-
   if(props.data) {
-
-
     const countryCode = props.data.sys.country;
-
     const regionNames = new Intl.DisplayNames(
       ['en'], { type: 'region' }
     );
@@ -47,7 +43,8 @@ export default function Weather(props) {
                     <div>
                       <div>
                         <div className="d-flex flex-column units justify-content-center align-items-center ps-2">
-                          <a href="#/action-1"><strong>F</strong></a>⎯<a href="#/action-2">C</a>
+                          <strong>F</strong>
+                          {/* ⎯<a href="/" >C</a> */}
                         </div>
                       </div>
                     </div>
@@ -121,70 +118,9 @@ export default function Weather(props) {
               </Row>
             </div>
         </div>
-        <Accordion className="mx-auto p-0 shadow" defaultActiveKey="0">
-          <Accordion.Item className="pt-0" eventKey="0">
-            <Accordion.Header className="p-0">Five Day Forecast</Accordion.Header>
-            <Accordion.Body >
-              <Row>
-                <Col>
-                  <ul>
-                    <li className="Weather-forecast">
-                      <div className="d-flex justify-content-between">
-                        <div>
-                          Saturday 🌤 
-                        </div>
-                        <div>
-                          <strong>67º</strong> | 56º
-                        </div>
-                      </div>
-                    </li>
-                    <li className="Weather-details-item">
-                      <div className="d-flex justify-content-between">
-                        <div>
-                          Sunday ☀️
-                        </div>
-                        <div>
-                          <strong>69º</strong> | 50º
-                        </div>
-                      </div>
-                    </li>
-                    <li className="Weather-details-item">
-                      <div className="d-flex justify-content-between">
-                        <div>
-                          Monday ☀️
-                        </div>
-                        <div>
-                          <strong>70º</strong> | 63º
-                        </div>
-                      </div>
-                    </li>
-                    <li className="Weather-details-item">
-                      <div className="d-flex justify-content-between">
-                        <div>
-                          Tuesday 🌤
-                        </div>
-                        <div>
-                          <strong>60º</strong> | 53º
-                        </div>
-                      </div>
-                    </li>
-                    <li className="Weather-details-item">
-                      <div className="d-flex justify-content-between">
-                        <div>
-                          Wednesday ☀️
-                        </div>
-                        <div>
-                          <strong>70º</strong> | 63º
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </Col>
-              </Row>
-            </Accordion.Body>
-          </Accordion.Item>
-  
-        </Accordion>
+
+        <Forecast />
+       
         <footer className="mx-auto d-flex pb-3 pt-4">
           <div>This project was coded by <a href="https://astonishing-gnome-05de92.netlify.app/" target="_blank" rel="noreferrer">Kendra Reynolds</a> and made <a href="https://github.com/kendracodesio/my-weather-app.git" target="_blank" rel="noreferrer">open source on GitHub</a></div>
         </footer>

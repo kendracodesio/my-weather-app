@@ -75,11 +75,11 @@ background: var(--light-color);
 }
 
 
-
 .accordion-button {
   font-size: 22px;
   font-weight: 600;
 }
+
 .Weather-description .units a {
   color: var(--primary-color) !important;
 
@@ -111,7 +111,9 @@ background: var(--light-color);
   color: #fff;
 }
 .units, .units a {
-  font-size: 22px;
+  position: relative;
+  top: -15px;
+  font-size: 30px;
   line-height: .9;
   color: #fff;
   

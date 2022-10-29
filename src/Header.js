@@ -43,7 +43,6 @@ export default function Header(props) {
    
   }
 
-
   
 if (data === null && city === props.defaultCity) {
   showDefaultData();

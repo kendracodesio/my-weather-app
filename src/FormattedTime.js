@@ -14,21 +14,20 @@ export default function FormattedTime(props) {
     }
   }
 
-  function formatDate(newDate) {
-    let hr = newDate.getHours();
-    let min = newDate.getMinutes();
+  function formatTime(timestamp) {
+    let hr = timestamp.getHours();
+    let min = timestamp.getMinutes();
     let time = convertTimeAmPm(hr, min);
     return `As of ${time} (GMT${formatTimezone(timezone)})`
   }
 
-  function getTime(timezone) {
+  function displayTimeAtCity(timezone) {
     let date = new Date();
     let usersLocalTime = date.getTime();
     let currentOffset = date.getTimezoneOffset() * 60000;
     let utc = usersLocalTime + currentOffset;
-    console.log(timezone);
-    let citysLocalTime = new Date(utc + 3600000 * timezone);
-    return formatDate(citysLocalTime);
+    let timeAtCity = new Date(utc + 3600000 * timezone);
+    return formatTime(timeAtCity);
   }
 
   function convertTimeAmPm(hours, minutes) {
@@ -48,7 +47,7 @@ export default function FormattedTime(props) {
 
   return(
     <div>
-      {getTime(timezone)}
+      {displayTimeAtCity(timezone)}
     </div>
   );
 }
