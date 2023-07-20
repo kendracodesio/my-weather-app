@@ -3,7 +3,7 @@ import "./Header.css";
 
 export default function FormattedDate(props) {
 
-  if (props.data) {
+  if (props.data.ready) {
   let timezone = props.data.timezone / 3600;
 
   function formatDate(timestamp) {
