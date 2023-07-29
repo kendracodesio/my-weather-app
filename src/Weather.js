@@ -129,7 +129,7 @@ export default function Weather(props) {
      
 
       <footer className="d-flex justify-content-center pb-3 pt-4 mx-auto">
-        <div>This <a href="https://github.com/kendracodesio/my-weather-app.git" target="_blank" rel="noreferrer">open source project</a> was designed and developed by <a href="https://astonishing-gnome-05de92.netlify.app/" target="_blank" rel="noreferrer">Kendra Reynolds</a></div> 
+        <div>This <a href="https://github.com/kendracodesio/my-weather-app.git" target="_blank" rel="noreferrer">open source project</a> was designed and developed by Kendra Reynolds</div>
       </footer>
 
     </Container>
